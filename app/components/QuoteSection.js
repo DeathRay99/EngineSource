@@ -148,7 +148,7 @@ const QuoteSection = () => {
         {/* Left Content */}
         <div className="text-white max-w-2xl space-y-6 lg:w-1/2">
           <TypewriterEffectSmooth words={words} />
-          <p className="text-lg">
+          <p className="text-xs hidden sm:block md:text-lg">
             Enhance the performance of your vehicle with trusted used engines.
             Operated locally with full-fledged support from leading auto giants,
             we deliver exceptional quality to meet your automotive needs.

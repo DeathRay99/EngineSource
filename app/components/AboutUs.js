@@ -1,6 +1,6 @@
 const AboutUs = () => {
     return (
-      <div className="w-full max-w-7xl mx-auto mt-[170px] flex items-center space-x-8">
+      <div className="w-full max-w-7xl mx-auto mt-1 flex items-center space-x-8 sm:mt-44">
         {/* Left side - Images */}
         <div className="w-1/2 space-y-4">
           <div className="w-full h-auto">

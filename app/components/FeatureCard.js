@@ -1,7 +1,7 @@
 const FeatureCard = () => {
     return (
-      <div className="relative">
-        <div className="absolute top-[-60px] left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-lg p-6 w-full max-w-6xl">
+      <div className="relative ">
+        <div className="static sm:absolute sm:top-[-60px] sm:left-1/2  sm:-translate-x-1/2 bg-white shadow-lg rounded-lg p-6 w-full max-w-6xl">
           <h3 className="text-xl font-bold text-blue-600 mb-1">Discover Our Features</h3>
           <h4 className="text-4xl text-gray-800 mb-3 font-bold ">High-Quality Used Engine Parts Near Me</h4>
           <p className="text-base text-gray-700 mb-1">

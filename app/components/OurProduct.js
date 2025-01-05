@@ -85,7 +85,7 @@ const OurProducts = () => {
       </div>
 
       {/* Carousel with Arrow Buttons */}
-      <div className="relative w-[1000px] mx-auto mt-[-80px]">
+      <div className="relative w-[100%] mt-[-80] ">
         {/* Left Arrow */}
         <button
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black text-3xl font-bold rounded-full p-4 shadow-md opacity-90 hover:opacity-100 transition-all duration-300 focus:outline-none z-10"
@@ -96,7 +96,7 @@ const OurProducts = () => {
 
         {/* Cards Container */}
         <div
-          className="flex flex-row justify-between overflow-x-scroll scrollbar-hide"
+          className="flex flex-row overflow-x-scroll scrollbar-hide"
           ref={scrollContainer}
           onMouseEnter={() => setIsScrolling(false)}
           onMouseLeave={() => setIsScrolling(true)}

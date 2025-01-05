@@ -12,7 +12,7 @@ const Nav = () => {
     <div>
       {/* Navigation Bar */}
       <nav className="bg-white shadow-md">
-        <div className="container mx-auto px-8 py-3 flex justify-between items-center">
+        <div className="container mx-auto px-6 py-3 flex justify-between items-center gap-4">
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img
