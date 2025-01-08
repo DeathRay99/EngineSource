@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="flex justify-between items-center space-x-6 md:space-x-12">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/BBB_US_TORCH_sm.svg" alt="Logo" className="h-[27%] w-[27%]" />
+            <img src="/BBB_US_Torch_sm.svg" alt="BBB" className="h-[27%] w-[27%]" />
           </div>
 
           {/* Social Media Icons jjj*/}
