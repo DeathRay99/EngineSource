@@ -172,7 +172,7 @@ const QuoteSection = () => {
           </p>
           <button
             className="bg-blue-600 text-white py-1 px-1 sm:py-3 sm:px-6 rounded-md text-sm sm:text-lg shadow-md flex items-center justify-center space-x-2 font-bold transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            onClick={() => (window.location.href = "tel:+123456789")}
+            onClick={() => (window.location.href = "tel:+14023964181")}
           >
             <span className="font-bold">Call with Expert</span>
             <span className="text-xl font-bold">→</span>

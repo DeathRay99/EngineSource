@@ -20,11 +20,11 @@ const Footer = () => {
           <div className="flex flex-col items-start space-y-2 p-4 border-2 border-blue-500 rounded-lg">
             <h4 className="text-2xl font-bold">Call us</h4>
             <a
-              href="tel:+918448875715"
+              href="tel:+14023964181"
               className="flex items-center space-x-2 text-base hover:text-blue-500 transition-colors duration-300 hover:scale-105"
             >
               <FaPhoneAlt className="text-xl" />
-              <span>+91 8448875715</span>
+              <span>+1 4023964181</span>
             </a>
           </div>
 
@@ -41,18 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Address */}
-          <div className="flex flex-col items-start space-y-2 p-4 border-2 border-blue-500 rounded-lg">
-            <h4 className="text-2xl font-bold">Address</h4>
-            <a
-              href=""
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 text-base hover:text-blue-500 transition-colors duration-300 hover:scale-105"
-            >
-              <FaMapMarkerAlt className="text-xl" />
-              <span>USA</span>
-            </a>
-          </div>
+          
         </div>
 
         {/* Spacer between content */}

@@ -13,7 +13,7 @@ export async function POST(req) {
     description = description || "NA"; // If description is empty, set to "NA"
     
     const emailResponse = await resend.emails.send({
-      from: "PartsStoreUS <onboarding@resend.dev>",
+      from: "PartsStoreUS <sales@partsstoreus.com>",
       to: process.env.OWNER_EMAIL, // Replace with the owner's email
       subject: "New Quote Request",
       html: `
