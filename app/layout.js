@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/logo.svg" /> {/* Replace with your actual image */}
-        <meta property="og:url" content="https://www.PartsStoreUS.com" /> {/* Replace with your website URL */}
+        <meta property="og:url" content="https://www.partsstoreus.com" /> {/* Replace with your website URL */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
