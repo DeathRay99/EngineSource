@@ -77,10 +77,10 @@ const OurProducts = () => {
         <p className="text-lg text-gray-600 mt-4">
           Revitalize your journey with our premium-quality used engines,
           meticulously chosen for optimal performance and exceptional
-          efficiency. At EngineSource, we fuel your ambitions with engines that
+          efficiency. At PartsStoreUS, we fuel your ambitions with engines that
           marry power and precision. Our advanced technology and trusted
           partners ensure you experience unmatched reliability and innovation.
-          Drive your future forward with EngineSource.
+          Drive your future forward with PartsStoreUS.
         </p>
       </div>
 

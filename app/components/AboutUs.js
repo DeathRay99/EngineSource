@@ -19,7 +19,7 @@ const AboutUs = () => {
             Buy high-performance Used Engines online with confidence!
           </h4>
           <p className="text-base text-gray-700 mb-4">
-            EngineSource is a trusted name in the industry, offering OEM quality used engines online. We work with trusted partners, ensuring high years of guaranteed usage so you never have to worry about any failure. At EngineSource, our primary goal is to use quality engines and automobile parts while placing orders for old and OEM vehicle parts. This gives plenty of scope for parts, new parts, and selling parts to improve the efficiency of your heavy-duty vehicles, like trucks and cars. Our clients enjoy unique advantages of assembling new and OEM vehicle parts with full support management.
+            PartsStoreUS is a trusted name in the industry, offering OEM quality used engines online. We work with trusted partners, ensuring high years of guaranteed usage so you never have to worry about any failure. At PartsStoreUS, our primary goal is to use quality engines and automobile parts while placing orders for old and OEM vehicle parts. This gives plenty of scope for parts, new parts, and selling parts to improve the efficiency of your heavy-duty vehicles, like trucks and cars. Our clients enjoy unique advantages of assembling new and OEM vehicle parts with full support management.
           </p>
   
           <ul className="list-disc pl-6 text-base text-gray-700 mb-4">

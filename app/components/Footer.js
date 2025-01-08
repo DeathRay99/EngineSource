@@ -32,11 +32,11 @@ const Footer = () => {
           <div className="flex flex-col items-start space-y-2 p-4 border-2 border-blue-500 rounded-lg">
             <h4 className="text-2xl font-bold">Write to us</h4>
             <a
-              href="mailto:info@enginesource.us"
+              href="mailto:partsstoreus@gmail.com"
               className="flex items-center space-x-2 text-base hover:text-blue-500 transition-colors duration-300 hover:scale-105"
             >
               <FaEnvelope className="text-xl" />
-              <span>info@enginesource.us</span>
+              <span>partsstoreus@gmail.com</span>
             </a>
           </div>
 
@@ -108,7 +108,7 @@ const Footer = () => {
 
         {/* Footer Bottom */}
         <div className="text-center">
-          <p className="text-sm">&copy; 2024 EngineSource. All rights reserved.</p>
+          <p className="text-sm">&copy; 2024 PartsStoreUS. All rights reserved.</p>
         </div>
       </div>
 

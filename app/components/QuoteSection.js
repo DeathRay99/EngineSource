@@ -12,7 +12,7 @@ const words = [
     className: "text-white",
   },
   {
-    text: "EngineSource.",
+    text: "PartsStoreUS.",
     className: "text-blue-500 dark:text-blue-500",
   },
 ];
@@ -356,7 +356,7 @@ const QuoteSection = () => {
                   />
                   <span className="ml-2 text-xs font-bold">
                     By checking this box, you agree to receive recurring
-                    messages from EngineSource. Reply STOP to opt out. Reply
+                    messages from PartsStoreUS. Reply STOP to opt out. Reply
                     HELP for help. Message frequency varies. Message and data
                     rates may apply. Carriers are not liable for delayed or
                     undelivered messages.

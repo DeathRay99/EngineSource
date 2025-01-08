@@ -13,8 +13,8 @@ export async function POST(req) {
     description = description || "NA"; // If description is empty, set to "NA"
     
     const emailResponse = await resend.emails.send({
-      from: "EngineSource <onboarding@resend.dev>",
-      to: "yashasvi2207@gmail.com", // Replace with the owner's email
+      from: "PartsStoreUS <onboarding@resend.dev>",
+      to: process.env.OWNER_EMAIL, // Replace with the owner's email
       subject: "New Quote Request",
       html: `
         <html>
@@ -120,7 +120,7 @@ export async function POST(req) {
               <p><strong>Important:</strong> This email contains a request for a quote from a potential customer. Please review the details above and follow up with the customer as soon as possible to provide the requested information.</p>
             </div>
             <div class="footer">
-              <p>You received this query because someone is interested in purchasing a part from EngineSource. Please ensure a prompt and accurate response to enhance customer satisfaction.</p>
+              <p>You received this query because someone is interested in purchasing a part from PartsStoreUS. Please ensure a prompt and accurate response to enhance customer satisfaction.</p>
             </div>
           </body>
         </html>

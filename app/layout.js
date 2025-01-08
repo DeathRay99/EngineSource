@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "EngineSource",
+  title: "PartsStoreUS",
   description:
     "Enhance the performance of your vehicle with trusted used engines. All our branches operate locally and are supported by leading auto giants, ensuring quality and reliability.",
   keywords:
     "used engines, vehicle engines, performance engines, auto parts, trusted used engines, car repair, engine supplier , second hand engines , legit engines , used engines in usa",
-  author: "EngineSource",
+  author: "PartsStoreUS",
   robots: "index, follow", // Tells search engines to index the page and follow links
 };
 
@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:image" content="/logo.svg" /> {/* Replace with your actual image */}
-        <meta property="og:url" content="https://www.enginesource.com" /> {/* Replace with your website URL */}
+        <meta property="og:url" content="https://www.PartsStoreUS.com" /> {/* Replace with your website URL */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />

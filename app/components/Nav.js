@@ -60,15 +60,15 @@ const Nav = () => {
 
           {/* Need Help Section */}
           <div className="flex items-center space-x-2">
-            <a href="tel:+123456789">
+            <a href="tel:+918448875715">
             <FaPhoneAlt
               className="sm:h-6 sm:w-6 text-gray-700 transition-transform transform hover:scale-110 hover:text-blue-500"
             />
             </a>
-            <span className="text-gray-700 text-xs sm:text-sm font-bold">
+            <span className="text-gray-700 text-xs font-bold ">
               Need Help?{" "}
-              <a href="tel:+123456789" className="text-blue-500 font-bold">
-                +1 234 567 89
+              <a href="tel:+918448875715" className="text-blue-500 font-bold">
+              +91 8448875715
               </a>
             </span>
           </div>
@@ -87,8 +87,8 @@ const Nav = () => {
           >
             <h2 className="text-xl font-bold text-gray-800">Contact Us</h2>
             <p className="text-gray-600 mt-2">You can reach us at:</p>
-            <p className="text-blue-500">+1 234 567 89</p>
-            <p className="mt-4 text-gray-600">Email: support@yourdomain.com</p>
+            <p className="text-blue-500">+91 8448875715</p>
+            <p className="mt-4 text-gray-600">Email: partsstoreus@gmail.com</p>
             <button
               onClick={toggleModal}
               className="mt-4 w-full py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
