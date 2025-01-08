@@ -65,7 +65,7 @@ const Footer = () => {
             <img src="/BBB_US_TORCH_sm.svg" alt="Logo" className="h-[27%] w-[27%]" />
           </div>
 
-          {/* Social Media Icons */}
+          {/* Social Media Icons jjj*/}
           <div className="flex space-x-6">
             <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
               <FaWhatsapp className="text-xl hover:scale-110 transition-transform duration-300" />
