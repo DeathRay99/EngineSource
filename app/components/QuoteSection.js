@@ -40,7 +40,7 @@ const carBrands = {
   Lamborghini: ["Aventador", "Huracán", "Urus", "Sián"],
   Maserati: ["Ghibli", "Levante", "Quattroporte", "GranTurismo"],
   Buick: ["Encore", "Envision", "LaCrosse", "Regal", "Enclave"],
-  Volvo: ["XC40", "XC60", "XC90", "S60", "S90"]
+  Volvo: ["XC40", "XC60", "XC90", "S60", "S90"],
 };
 
 const QuoteSection = () => {
@@ -53,34 +53,40 @@ const QuoteSection = () => {
   const [year, setYear] = useState(""); // Year state
   const [description, setDescription] = useState(""); // Description input
   const [part, setPart] = useState(""); // Part selection state
+  const [name, setName] = useState(""); // Name state
+  const [phone, setPhone] = useState(""); // Phone state
+  const [email, setEmail] = useState(""); // Email state
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-  // Initialize formData object with default empty values
-  const formData = {
-    name: e.target.elements.name ? e.target.elements.name.value.trim() : "",
-    phone: e.target.elements.phone ? e.target.elements.phone.value.trim() : "",
-    email: e.target.elements.email ? e.target.elements.email.value.trim() : "",
-    year: e.target.elements.year ? e.target.elements.year.value : "",
-    brand: e.target.elements.brand ? e.target.elements.brand.value : "",
-    model: e.target.elements.model ? e.target.elements.model.value : "",
-    part: e.target.elements.part ? e.target.elements.part.value : "",
-    description: e.target.elements.description ? e.target.elements.description.value.trim() : "", // Check if description is available
-  };
+    // Initialize formData object with default empty values
+    const formData = {
+      name,
+      phone,
+      email,
+      year,
+      brand: selectedBrand,
+      model: selectedModel,
+      part,
+      description,
+    };
 
-  // Validation logic
-  const errors = {};
+    // Validation logic
+    const errors = {};
 
-  if (!formData.name) errors.name = "Name is required.";
-  if (!formData.phone) errors.phone = "Phone number is required.";
-  if (formData.phone && !/^\d{10}$/.test(formData.phone)) errors.phone = "Phone number must be a valid 10-digit number.";
-  if (!formData.email) errors.email = "Email is required.";
-  if (!formData.year) errors.year = "Year is required.";
-  if (!formData.brand) errors.brand = "Brand is required.";
-  if (!formData.model && formData.brand !== "Other") errors.model = "Model is required.";
-  if (!formData.part && formData.brand !== "Other") errors.part = "Part is required.";
-  if (!isChecked) errors.checkbox = "You must agree to the terms.";
+    if (!formData.name) errors.name = "Name is required.";
+    if (!formData.phone) errors.phone = "Phone number is required.";
+    if (formData.phone && !/^\d{10}$/.test(formData.phone))
+      errors.phone = "Phone number must be a valid 10-digit number.";
+    if (!formData.email) errors.email = "Email is required.";
+    if (!formData.year) errors.year = "Year is required.";
+    if (!formData.brand) errors.brand = "Brand is required.";
+    if (!formData.model && formData.brand !== "Other")
+      errors.model = "Model is required.";
+    if (!formData.part && formData.brand !== "Other")
+      errors.part = "Part is required.";
+    if (!isChecked) errors.checkbox = "You must agree to the terms.";
 
     setFormErrors(errors);
 
@@ -96,11 +102,22 @@ const QuoteSection = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-  
+
       if (response.ok) {
-        setMessage("Your details have been successfully saved. Our team will get back to you shortly.");
+        setMessage(
+          "Your details have been successfully saved. Our team will get back to you shortly."
+        );
         setShowModal(true); // Show the modal
         setFormErrors({});
+        setSelectedBrand("");
+        setSelectedModel("");
+        setPart("");
+        setDescription("");
+        setYear("");
+        setEmail("");
+        setName("");
+        setPhone("");
+        setIsChecked(false);
       } else {
         setMessage("Failed to submit the form. Please try again.");
         setShowModal(true); // Show the modal
@@ -116,7 +133,7 @@ const QuoteSection = () => {
     if (phoneValue.length > 10) {
       phoneValue = phoneValue.slice(0, 10); // Limit to 10 digits
     }
-    e.target.value = phoneValue;
+    setPhone(phoneValue);
   };
 
   const handleYearChange = (e) => {
@@ -143,7 +160,7 @@ const QuoteSection = () => {
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
-
+<div className="flex w-[100%]  h-[80vh] ">
       <div className="container mx-auto px-10 flex flex-wrap lg:flex-nowrap items-center justify-between relative">
         {/* Left Content */}
         <div className="text-white max-w-2xl space-y-6 lg:w-1/2">
@@ -154,7 +171,7 @@ const QuoteSection = () => {
             we deliver exceptional quality to meet your automotive needs.
           </p>
           <button
-            className="bg-blue-600 text-white py-3 px-6 rounded-md text-lg shadow-md flex items-center justify-center space-x-2 font-bold transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-blue-600 text-white py-1 px-1 sm:py-3 sm:px-6 rounded-md text-sm sm:text-lg shadow-md flex items-center justify-center space-x-2 font-bold transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={() => (window.location.href = "tel:+123456789")}
           >
             <span className="font-bold">Call with Expert</span>
@@ -175,7 +192,8 @@ const QuoteSection = () => {
                   className={`w-full border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm ${
                     formErrors.year ? "border-red-500" : "border-gray-300"
                   }`}
-                  defaultValue=""
+                  onChange={handleYearChange}
+                  value={year}
                 >
                   <option value="" disabled>
                     - Select Year -
@@ -287,8 +305,9 @@ const QuoteSection = () => {
               <div>
                 <input
                   type="text"
-                  name="name"
                   placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className="w-full border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm"
                 />
                 {formErrors.name && (
@@ -296,12 +315,14 @@ const QuoteSection = () => {
                 )}
               </div>
               <div className="flex">
-                <span className="w-10 border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">+1</span>
+                <span className="w-10 border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm bg-white">
+                  +1
+                </span>
                 <input
                   type="text"
-                  name="phone"
+                  value={phone}
+                  onChange={handlePhoneChange}
                   placeholder="Enter Phone (10 digits)"
-                  onInput={handlePhoneChange}
                   className={`w-full border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm ${
                     formErrors.phone ? "border-red-500" : "border-gray-300"
                   }`}
@@ -314,7 +335,8 @@ const QuoteSection = () => {
               <div className="mt-1">
                 <input
                   type="email"
-                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email Address"
                   className="w-full border rounded-md px-3 py-1.5 text-gray-700 focus:ring-blue-500 focus:border-blue-500 text-sm"
                 />
@@ -330,13 +352,14 @@ const QuoteSection = () => {
                     type="checkbox"
                     className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                     checked={isChecked}
-                    onChange={() => setIsChecked(!isChecked)}
+                    onChange={() => setIsChecked((pre)=>!pre)}
                   />
                   <span className="ml-2 text-xs font-bold">
-                  By checking this box, you agree to receive recurring messages
-                  from EngineSource. Reply STOP to opt out. Reply HELP for help.
-                  Message frequency varies. Message and data rates may apply.
-                  Carriers are not liable for delayed or undelivered messages.
+                    By checking this box, you agree to receive recurring
+                    messages from EngineSource. Reply STOP to opt out. Reply
+                    HELP for help. Message frequency varies. Message and data
+                    rates may apply. Carriers are not liable for delayed or
+                    undelivered messages.
                   </span>
                 </label>
                 {formErrors.checkbox && (
@@ -354,20 +377,21 @@ const QuoteSection = () => {
               </button>
             </div>
           </form>
+          </div>
         </div>
       </div>
 
       {/* Modal */}
       {showModal && (
-          <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
-            <div className="bg-white p-6 rounded-md w-80">
-              <p className="text-center">{message}</p>
-              <button
-                onClick={() => setShowModal(false)}
-                className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                Close
-              </button>
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">
+          <div className="bg-white p-6 rounded-md w-80">
+            <p className="text-center">{message}</p>
+            <button
+              onClick={() => setShowModal(false)}
+              className="mt-4 w-full bg-blue-600 text-white py-2 rounded-md transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              Close
+            </button>
           </div>
         </div>
       )}

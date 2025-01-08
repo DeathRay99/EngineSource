@@ -18,12 +18,12 @@ const Nav = () => {
             <img
               src="/logo.svg"
               alt="Logo"
-              className="h-10 w-100"
+              className="w-40 sm:w-56"
             />
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex space-x-6">
+          <ul className="hidden sm:flex space-x-6">
             <li>
               <a
                 href="#home"
@@ -60,10 +60,12 @@ const Nav = () => {
 
           {/* Need Help Section */}
           <div className="flex items-center space-x-2">
+            <a href="tel:+123456789">
             <FaPhoneAlt
-              className="h-6 w-6 text-gray-700 transition-transform transform hover:scale-110 hover:text-blue-500"
+              className="sm:h-6 sm:w-6 text-gray-700 transition-transform transform hover:scale-110 hover:text-blue-500"
             />
-            <span className="text-gray-700 text-sm font-bold">
+            </a>
+            <span className="text-gray-700 text-xs sm:text-sm font-bold">
               Need Help?{" "}
               <a href="tel:+123456789" className="text-blue-500 font-bold">
                 +1 234 567 89
