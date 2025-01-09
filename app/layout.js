@@ -35,21 +35,18 @@ export default function RootLayout({ children }) {
         <meta name="robots" content={metadata.robots} />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content="/logo.svg" />{" "}
-        {/* Replace with your actual image */}
-        <meta property="og:url" content="https://www.partsstoreus.com" />{" "}
-        {/* Replace with your website URL */}
+        <meta property="og:image" content="https://www.partsstoreus.com/logo.svg" />
+        <meta property="og:url" content="https://www.partsstoreus.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="/logo.svg" />{" "}
-        {/* Replace with your actual image */}
-        <link rel="icon" href="/favicon.ico" />{" "}
-        {/* Ensure you have a favicon */}
+        <meta name="twitter:image" content="https://www.partsstoreus.com/logo.svg" />
+        <link rel="icon" href="/favicon.ico" /> {/* Ensure you have a favicon */}
         <title>{metadata.title}</title>
+        
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADD_TRACKING_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_TRACKING_ID}`}
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -57,7 +54,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADD_TRACKING_ID}'); 
+              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_TRACKING_ID}');
             `,
           }}
         />

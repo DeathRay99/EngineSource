@@ -110,7 +110,7 @@ const QuoteSection = () => {
         try {
           if (window.gtag) {
             window.gtag('event', 'conversion', {
-              send_to: process.env.NEXT_PUBLIC_GOOGLE_SEND_TO, // Replace with your send_to ID
+              send_to: 'AW-11548761729/Lcd8CKXxlIIaEIG98IIr', // Replace with your send_to ID
               value: 1.0,
               currency: 'INR',
             });
@@ -384,7 +384,7 @@ const QuoteSection = () => {
             <div className="mt-1 text-center">
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 px-3 rounded-md text-lg shadow-md transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full bg-black text-white py-2 px-3 rounded-md text-lg shadow-md transform transition duration-300 ease-in-out hover:bg-black-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Get Quote
               </button>
