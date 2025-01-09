@@ -127,6 +127,76 @@ export async function POST(req) {
       `,
     });
 
+    const confirmationEmail = await resend.emails.send({
+      from: "PartsStoreUS <support@partsstoreus.com>",
+      to: email, // Customer's email
+      subject: "Thank you for your quote request!",
+      html: `
+        <html>
+          <head>
+            <style>
+              body {
+                font-family: Arial, sans-serif;
+                background-color: #f9fafb;
+                margin: 0;
+                padding: 0;
+              }
+              .container {
+                max-width: 600px;
+                margin: 20px auto;
+                background: #ffffff;
+                border-radius: 10px;
+                padding: 20px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+              }
+              .header {
+                text-align: center;
+                font-size: 20px;
+                color: #007bff;
+                font-weight: bold;
+              }
+              .details {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #333;
+              }
+              .footer {
+                margin-top: 30px;
+                text-align: center;
+                font-size: 12px;
+                color: #777;
+              }
+              .highlight {
+                color: #007bff;
+                font-weight: bold;
+              }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <div class="header">Thank you for your request!</div>
+              <div class="details">
+                <p>Dear ${name},</p>
+                <p>We have received your request for a quote. Here are the details:</p>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Phone:</strong> ${phone}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Year:</strong> ${year}</p>
+                <p><strong>Brand:</strong> ${brand}</p>
+                <p><strong>Model:</strong> ${model}</p>
+                <p><strong>Part:</strong> ${part}</p>
+                <p><strong>Description:</strong> ${description}</p>
+                <p>If you have any questions or need further assistance, feel free to contact us at <strong>+1 4023964181</strong>.</p>
+                <p>Our team will get back to you shortly with a quote.</p>
+              </div>
+              <div class="footer">
+                <p>PartsStoreUS - Your Trusted Partner for Auto Parts</p>
+              </div>
+            </div>
+          </body>
+        </html>
+      `,
+    });
     return new Response(JSON.stringify({ message: "Email sent successfully!", data: emailResponse }), {
       status: 200,
       headers: { "Content-Type": "application/json" },
