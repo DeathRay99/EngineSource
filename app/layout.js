@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
         
         <script
           async
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ADS_TRACKING_ID}`}
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11548761729"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ADS_TRACKING_ID}');
+              gtag('config', 'AW-11548761729');
             `,
           }}
         />
