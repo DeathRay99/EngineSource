@@ -56,9 +56,9 @@ const Footer = () => {
 
           {/* Social Media Icons jjj*/}
           <div className="flex space-x-6">
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
+            {/* <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
               <FaWhatsapp className="text-xl hover:scale-110 transition-transform duration-300" />
-            </a>
+            </a> */}
             <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors duration-300">
               <FaFacebookF className="text-xl hover:scale-110 transition-transform duration-300" />
             </a>

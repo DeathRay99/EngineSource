@@ -198,8 +198,8 @@ const QuoteSection = () => {
                   <option value="" disabled>
                     - Select Year -
                   </option>
-                  {[...Array(2025 - 1960)].map((_, index) => {
-                    const year = 1960 + index;
+                  {[...Array(2025 - 1990)].map((_, index) => {
+                    const year = 1990 + index;
                     return (
                       <option key={year} value={year}>
                         {year}
