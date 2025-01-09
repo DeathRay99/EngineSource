@@ -107,6 +107,19 @@ const QuoteSection = () => {
         setMessage(
           "Your details have been successfully saved. Our team will get back to you shortly."
         );
+        try {
+          if (window.gtag) {
+            window.gtag('event', 'conversion', {
+              send_to: process.env.NEXT_PUBLIC_GOOGLE_SEND_TO, // Replace with your send_to ID
+              value: 1.0,
+              currency: 'INR',
+            });
+          } else {
+            console.warn("Google Analytics not loaded.");
+          }
+        } catch (e) {
+          console.error("Error sending conversion event:", e);
+        }
         setShowModal(true); // Show the modal
         setFormErrors({});
         setSelectedBrand("");

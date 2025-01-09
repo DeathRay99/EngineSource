@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-12 px-6">
+    <footer className="bg-black text-white py-10 px-6">
       <div className="max-w-7xl mx-auto flex flex-col space-y-6">
         {/* Contact details in a single row */}
         <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
