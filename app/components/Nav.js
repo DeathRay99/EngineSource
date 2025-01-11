@@ -59,13 +59,13 @@ const Nav = () => {
           </ul>
 
           {/* Need Help Section */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 ">
             <a href="tel:+14023964181">
             <FaPhoneAlt
               className="sm:h-6 sm:w-6 text-gray-700 transition-transform transform hover:scale-110 hover:text-blue-500"
             />
             </a>
-            <span className="text-gray-700 text-xs font-bold ">
+            <span className="text-gray-700 text-sm font-bold ">
               <span className="hidden sm:inline">Need Help?{" "}</span>
               <a href="tel:+14023964181" className="text-blue-500 font-bold">
               +1 4023964181

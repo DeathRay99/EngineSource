@@ -174,17 +174,17 @@ const QuoteSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 <div className="flex w-[100%]  h-[80vh] ">
-      <div className="container mx-auto px-10 flex flex-wrap lg:flex-nowrap items-center justify-between relative">
+      <div className="container px-2.5 sm:px-10 flex flex-wrap lg:flex-nowrap items-center justify-between relative">
         {/* Left Content */}
-        <div className="text-white max-w-2xl space-y-6 lg:w-1/2">
+        <div className="text-white w-[90%] space-y-6 ">
           <TypewriterEffectSmooth words={words} />
-          <p className="text-xs hidden sm:block md:text-lg">
+          <p className="text-xs hidden sm:block md:text-lg w-[60%]">
             Enhance the performance of your vehicle with trusted used engines.
             Operated locally with full-fledged support from leading auto giants,
             we deliver exceptional quality to meet your automotive needs.
           </p>
           <button
-            className="bg-blue-600 text-white py-1 px-1 sm:py-3 sm:px-6 rounded-md text-sm sm:text-lg shadow-md flex items-center justify-center space-x-2 font-bold transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-blue-600 m-0 text-white py-1 px-1 sm:py-3 sm:px-6 rounded-md text-sm sm:text-lg shadow-md flex items-center justify-center space-x-2 font-bold transform transition duration-300 ease-in-out hover:bg-blue-700 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={() => (window.location.href = "tel:+14023964181")}
           >
             <span className="font-bold">Call with Expert</span>
@@ -192,11 +192,11 @@ const QuoteSection = () => {
           </button>
         </div>
         {/* Form */}
-        <div className="bg-blue-600 shadow-md rounded-lg p-3 max-w-xl w-full lg:ml-10 mt-5">
+        <div className="bg-blue-600 shadow-md rounded-lg  p-1 sm:p-3 max-w-xl w-full lg:ml-10  sm:mt-5">
           <h2 className="text-2xl font-bold text-white text-center mb-2">
             Get Your Free Quote
           </h2>
-          <form className="mt-3" onSubmit={handleSubmit}>
+          <form className="mt-0 sm:mt-3 " onSubmit={handleSubmit}>
             <div className="grid grid-cols-2 gap-4">
               {/* Year Dropdown */}
               <div>
@@ -314,7 +314,7 @@ const QuoteSection = () => {
             )}
 
             {/* Other Fields */}
-            <div className="grid grid-cols-1 gap-4 mt-2">
+            <div className="grid grid-cols-1 gap-2 sm:gap-4 mt-2">
               <div>
                 <input
                   type="text"

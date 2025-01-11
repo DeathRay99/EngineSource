@@ -1,6 +1,6 @@
 const AboutUs = () => {
     return (
-      <div className="w-full max-w-7xl mx-auto mt-1 flex items-center space-x-8 sm:mt-44">
+      <div className="w-[95%] sm:w-[100%] max-w-7xl mx-auto mt-1 flex items-center sm:space-x-8 sm:mt-36 flex-col sm:flex-row pt-2 gap-2 justify-center">
         {/* Left side - Images */}
         <div className="w-1/2 space-y-4">
           <div className="w-full h-auto">
@@ -13,9 +13,9 @@ const AboutUs = () => {
         </div>
   
         {/* Right side - Content */}
-        <div className="w-1/2">
-          <h3 id="about" className="text-xl font-bold text-blue-600 mb-1">About Us</h3>
-          <h4 className="text-4xl text-gray-800 mb-4 font-bold ">
+        <div className="w-[92%] sm:w-1/2 ml-0">
+          <h3 id="about" className="text-lg sm:text-xl font-bold text-blue-600 mb-1">About Us</h3>
+          <h4 className="text-2xl sm:text-4xl text-gray-800 mb-4 font-bold text-justify">
             Buy high-performance Used Engines online with confidence!
           </h4>
           <p className="text-base text-gray-700 mb-4">
