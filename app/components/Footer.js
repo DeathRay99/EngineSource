@@ -75,7 +75,7 @@ const Footer = () => {
             {/* Subscribe */}
             <div className="flex flex-col space-y-2 ">
               <h3 className="text-xl font-semibold text-center">Subscribe</h3>
-              <p>Want to be notified about our services? Just sign up and we'll send you a notification by email.</p>
+              <p className='text-sm sm:text-base'>Want to be notified about our services? Just sign up and we'll send you a notification by email.</p>
               <form onSubmit={handleSubmit} className="space-y-2">
                 <input
                   type="email"
