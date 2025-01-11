@@ -12,31 +12,31 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-10 px-4">
+    <footer className="bg-black text-white py-2 sm:py-10 px-4">
       <div className="max-w-7xl mx-auto flex flex-col space-y-6">
         {/* Contact details in a single row */}
-        <div className="flex flex-row justify-between items-center ">
+        <div className="flex sm:flex-row justify-between flex-col gap-2 sm:gap-0 ">
           {/* Call us */}
           <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg">
-            <h4 className="text-2xl font-bold">Call us</h4>
+            <h4 className="text-lg sm:text-2xl font-bold">Call us</h4>
             <a
               href="tel:+14023964181"
               className="flex items-center space-x-2 text-base hover:text-blue-500 transition-colors duration-300 hover:scale-105"
             >
-              <FaPhoneAlt className="text-xl" />
+              <FaPhoneAlt className="text-base sm:text-xl" />
               <span>+1 4023964181</span>
             </a>
           </div>
 
           {/* Write to Us */}
-          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg w-40">
-            <h4 className="text-2xl font-bold">Write to us</h4>
+          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg ">
+            <h4 className="text-lg sm:text-2xl font-bold">Write to us</h4>
             <a
               href="mailto:partsstoreus@gmail.com"
-              className="flex items-center space-x-2 text-base hover:text-blue-500 transition-colors duration-300 hover:scale-105"
+              className="flex items-center space-x-2 text-base  hover:text-blue-500 transition-colors duration-300 hover:scale-105"
             >
-              <FaEnvelope className="text-xl" />
-              <span>partsstoreus@gmail.com</span>
+              <FaEnvelope className="text-base sm:text-xl " />
+              <span className='text-base'>partsstoreus@gmail.com</span>
             </a>
           </div>
 
@@ -48,7 +48,7 @@ const Footer = () => {
         {/* <div className="h-8"></div> */}
 
         {/* Social Media Icons and Quick Links/Subscribe in a single row */}
-        <div className="flex justify-between items-center space-x-6 md:space-x-12">
+        <div className="flex justify-between items-center  md:space-x-12 flex-wrap gap-2">
           {/* Logo */}
           <div className="flex items-center">
             <img src="/BBB_US_Torch_sm.svg" alt="BBB" className="w-32 h-24" />
@@ -71,10 +71,10 @@ const Footer = () => {
           </div>
 
           {/* Quick Links and Subscribe */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-1/3">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 ">
             {/* Subscribe */}
-            <div className="flex flex-col space-y-2">
-              <h3 className="text-xl font-semibold">Subscribe</h3>
+            <div className="flex flex-col space-y-2 ">
+              <h3 className="text-xl font-semibold text-center">Subscribe</h3>
               <p>Want to be notified about our services? Just sign up and we'll send you a notification by email.</p>
               <form onSubmit={handleSubmit} className="space-y-2">
                 <input
