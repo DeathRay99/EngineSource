@@ -12,12 +12,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black text-white py-10 px-6">
+    <footer className="bg-black text-white py-10 px-4">
       <div className="max-w-7xl mx-auto flex flex-col space-y-6">
         {/* Contact details in a single row */}
-        <div className="flex flex-col md:flex-row justify-between items-start space-y-6 md:space-y-0">
+        <div className="flex flex-row justify-between items-center ">
           {/* Call us */}
-          <div className="flex flex-col items-start space-y-2 p-4 border-2 border-blue-500 rounded-lg">
+          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg">
             <h4 className="text-2xl font-bold">Call us</h4>
             <a
               href="tel:+14023964181"
@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Write to Us */}
-          <div className="flex flex-col items-start space-y-2 p-4 border-2 border-blue-500 rounded-lg">
+          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg">
             <h4 className="text-2xl font-bold">Write to us</h4>
             <a
               href="mailto:partsstoreus@gmail.com"
@@ -45,13 +45,13 @@ const Footer = () => {
         </div>
 
         {/* Spacer between content */}
-        <div className="h-8"></div>
+        {/* <div className="h-8"></div> */}
 
         {/* Social Media Icons and Quick Links/Subscribe in a single row */}
         <div className="flex justify-between items-center space-x-6 md:space-x-12">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/BBB_US_Torch_sm.svg" alt="BBB" className="h-[27%] w-[27%]" />
+            <img src="/BBB_US_Torch_sm.svg" alt="BBB" className="w-32 h-24" />
           </div>
 
           {/* Social Media Icons jjj*/}
@@ -71,7 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links and Subscribe */}
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 w-1/3">
             {/* Subscribe */}
             <div className="flex flex-col space-y-2">
               <h3 className="text-xl font-semibold">Subscribe</h3>
