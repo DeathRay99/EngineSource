@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
 
           {/* Write to Us */}
-          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg">
+          <div className="flex flex-col items-start space-y-2 p-2 sm:p-4 border-2 border-blue-500 rounded-lg w-40">
             <h4 className="text-2xl font-bold">Write to us</h4>
             <a
               href="mailto:partsstoreus@gmail.com"
