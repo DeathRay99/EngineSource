@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/Nav";
 import Head from "next/head";
-import Script from "next/script";
+import GoogleTracker from "./components/GoogleTracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,21 +28,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=AW-11548761729"
-        ></Script>
-        <Script
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'AW-11548761729');
-            `,
-          }}
-        />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content={metadata.description} />
@@ -72,6 +57,7 @@ export default function RootLayout({ children }) {
       >
         <Nav />
         {children}
+        <GoogleTracker/>
       </body>
     </html>
   );

@@ -110,7 +110,7 @@ const QuoteSection = () => {
         try {
           if (window.gtag) {
             window.gtag('event', 'conversion', {
-              send_to: 'AW-11548761729/Lcd8CKXxlIIaEIG98IIr', // Replace with your send_to ID
+              send_to: process.env.NEXT_PUBLIC_GOOGLE_SEND_TO, // Replace with your send_to ID
               value: 1.0,
               currency: 'INR',
             });
