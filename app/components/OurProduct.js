@@ -8,6 +8,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "./ui/carousel";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 import Autoplay from "embla-carousel-autoplay"
 
@@ -32,8 +35,13 @@ const OurProducts = () => {
       link: "/call-us",
     },
   ];
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+    });
+  }, []);
   return (
-    <section className="max-w-screen-lg w-[100%] mx-auto p-8">
+    <section className="max-w-screen-lg w-[100%] mx-auto p-8" data-aos="zoom-in">
       <div className="mb-8">
         <h2
           id="order"

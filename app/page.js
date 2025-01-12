@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import EngineCards from "./components/EngineCards";
 import OurProducts from "./components/OurProduct";
 import Head from "next/head";
+import AnimatedAboutUs from "./components/AnimatedAboutUs";
 import { FaPhoneAlt, FaComments } from "react-icons/fa"; // Import phone and chatbot icons
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
     <div>
       <QuoteSection />
       <FeatureCard />
-      <AboutUs />
+      <AnimatedAboutUs />
       <OurProducts />
       <Footer />
 

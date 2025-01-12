@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const words = [
   {
@@ -56,7 +58,9 @@ const QuoteSection = () => {
   const [name, setName] = useState(""); // Name state
   const [phone, setPhone] = useState(""); // Phone state
   const [email, setEmail] = useState(""); // Email state
-
+  useEffect(() => {
+    AOS.init({});
+  }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -192,7 +196,7 @@ const QuoteSection = () => {
           </button>
         </div>
         {/* Form */}
-        <div className="bg-blue-600 shadow-md rounded-lg  p-1 sm:p-3 max-w-xl w-full lg:ml-10  sm:mt-5">
+        <div className="bg-blue-600 shadow-md rounded-lg  p-1 sm:p-3 max-w-xl w-full lg:ml-10  sm:mt-5" data-aos="flip-up" data-aos-duration="1200">
           <h2 className="text-2xl font-bold text-white text-center mb-2">
             Get Your Free Quote
           </h2>
@@ -291,9 +295,6 @@ const QuoteSection = () => {
                     </option>
                     <option value="Engine">Engine</option>
                     <option value="Transmission">Transmission</option>
-                    <option value="Turbo">Turbo</option>
-                    <option value="Suspension">Suspension</option>
-                    <option value="Brakes">Brakes</option>
                   </select>
                 </div>
               </div>
