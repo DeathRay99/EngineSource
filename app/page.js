@@ -1,12 +1,7 @@
-import Image from "next/image";
 import QuoteSection from "./components/QuoteSection";
 import FeatureCard from "./components/FeatureCard";
-import AboutUs from "./components/AboutUs";
 import Footer from "./components/Footer";
-import EngineCards from "./components/EngineCards";
-import OurProducts from "./components/OurProduct";
-import Head from "next/head";
-import AnimatedAboutUs from "./components/AnimatedAboutUs";
+import {AnimatedAboutUs, AnimatedOurProduct} from "./components/AnimatedComponents";
 import { FaPhoneAlt, FaComments } from "react-icons/fa"; // Import phone and chatbot icons
 
 export default function Home() {
@@ -15,7 +10,7 @@ export default function Home() {
       <QuoteSection />
       <FeatureCard />
       <AnimatedAboutUs />
-      <OurProducts />
+      <AnimatedOurProduct />
       <Footer />
 
       {/* Floating Phone Icon */}
