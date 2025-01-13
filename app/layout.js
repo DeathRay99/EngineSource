@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "PartsStoreUS",
+  title: "Used Car Parts & Engines | PartsStoreUS",
   description:
-    "Enhance the performance of your vehicle with trusted used engines. All our branches operate locally and are supported by leading auto giants, ensuring quality and reliability.",
+    "Find quality used engines, transmissions, and other auto parts at PartsStoreUS. Serving the USA with reliable used parts for cars, trucks, and SUVs. Shop now!",
   keywords:
-    "used engines, partstoreus, vehicle engines, performance engines, auto parts, trusted used engines, car repair, engine supplier , second hand engines , legit engines , used engines in usa",
+    "used engines, used transmissions, used car parts, auto parts, used auto parts, car parts USA, used truck parts, used SUV parts, engine replacement, transmission repair, auto salvage, recycled auto parts, second hand engines , legit engines , used engines in usa, used Ford parts, used Ford engine, used Chevy parts, used Chevy engine, used Toyota parts, used Toyota engine, used Ford V6 parts, used Ford V6 engine, used Ford V8 parts, used Ford V8 engine, used Ford 4 cylinder parts, used Ford 4 cylinder engine, used Chevy V6 parts, used Chevy V6 engine, used Chevy V8 parts, used Chevy V8 engine, used Chevy 4 cylinder parts, used Chevy 4 cylinder engine, used Toyota V6 parts, used Toyota V6 engine, used Toyota V8 parts, used Toyota V8 engine, used Toyota 4 cylinder parts, used Toyota 4 cylinder engine, used BMW engine, used Audi engine",
   author: "PartsStoreUS",
-  robots: "index, follow", // Tells search engines to index the page and follow links
+  robots: "index, follow",
 };
 
 export default function RootLayout({ children }) {
